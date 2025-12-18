@@ -72,7 +72,5 @@ The script leverages the power of `awk` for field extraction and pipe-based proc
 
 
 *Created as a lightweight tool for system administrators and developers.*
-
-
-
-Would you like me to generate a **LICENSE** file for your repository as well?
+# Project Idea Source
+URL : https://roadmap.sh/projects/nginx-log-analyser
