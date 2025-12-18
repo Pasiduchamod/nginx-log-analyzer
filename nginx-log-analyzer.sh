@@ -17,8 +17,11 @@ fi
 echo "Top IP addresses with the most requests:"
 awk '{print $1}' "$LOG_FILE" | sort  | uniq -c | sort -nr | head -5
 
-echo "\nTop 5 most requested paths:"
+echo -e "\nTop 5 most requested paths:"
 awk '{print $7}' "$LOG_FILE" | sort | uniq -c | sort -nr | head -5
 
-echo "\nTop 5 response status code:"
-awk '{print $9}' "$LOF_FILE" | sort | uniq -c | sort -nr | head -5
+echo -e "\nTop 5 response status code:"
+awk '{print $9}' "$LOG_FILE" | sort | uniq -c | sort -nr | head -5
+
+echo -e "\nTop 5 user agents:"
+awk -F\" '{print $6}' "$LOG_FILE" | sort | uniq -c | sort -nr | head -5
